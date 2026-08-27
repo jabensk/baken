@@ -162,7 +162,7 @@
             min-height: 700px;
             display: flex;
             align-items: center;
-            justify-content: flex-start; /* Aligned left to show center stripe */
+            justify-content: flex-start;
             position: relative;
             background: url('landing_background.jpg') center/cover no-repeat;
             text-align: left;
@@ -179,11 +179,11 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 600px; /* Reduced width */
+            max-width: 600px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            margin-left: 8%; /* Push from left edge */
+            margin-left: 8%;
         }
 
         .hero-subtitle {
@@ -526,6 +526,80 @@
             color: var(--text-secondary);
             text-transform: uppercase;
             letter-spacing: 2px;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            background-color: var(--surface-color);
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .review-card {
+            background-color: var(--bg-color);
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.03);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .review-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .review-author {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        .review-date {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .review-stars {
+            color: var(--accent-color);
+            font-size: 1rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.8;
+            flex: 1;
+            font-style: italic;
+        }
+        
+        .review-yandex {
+            margin-top: 20px;
+            font-size: 0.75rem;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         /* Contacts & Footer */
@@ -889,8 +963,8 @@
                 </div>
             </div>
 
-            <div class="masonry-item tall">
-                <img src="3.jpg" alt="Portfolio 5">
+            <div class="masonry-item tall" style="background-color: #050505;">
+                <img src="3.jpg" alt="Portfolio 5" style="object-fit: contain; width: 100%; height: 100%;">
             </div>
 
             <div class="masonry-item info-block">
@@ -926,6 +1000,76 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <div class="container">
+            <div class="section-subtitle">Что говорят гости</div>
+            <h2>Отзывы <span class="accent-text">Клиентов</span></h2>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">Gridima777</div>
+                        <div class="review-date">9 июля</div>
+                    </div>
+                    <div class="review-stars">★ ★ ★ ★ ★</div>
+                    <p class="review-text">«Хожу к этому барберу уже не первый раз и каждый раз остаюсь доволен. Всегда внимательно выслушает, подскажет, какая стрижка будет смотреться лучше, и делает всё аккуратно, без спешки. Однозначно рекомендую всем, кто ценит качество!»</p>
+                    <div class="review-yandex">Отзыв из Яндекса</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">Бородина Анастасия</div>
+                        <div class="review-date">10 июля</div>
+                    </div>
+                    <div class="review-stars">★ ★ ★ ★ ★</div>
+                    <p class="review-text">«Отличный барбершоп с приятной атмосферой. Мастера работают профессионально, внимательно относятся к пожеланиям, а результат всегда радует. Однозначно рекомендую!»</p>
+                    <div class="review-yandex">Отзыв из Яндекса</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">Амвросий Ж.</div>
+                        <div class="review-date">10 июля</div>
+                    </div>
+                    <div class="review-stars">★ ★ ★ ★ ★</div>
+                    <p class="review-text">«Ребята молодцы, хороший сервис 🔥🤘 Мастер Влад и Мастер Николай вы настоящие профи 🤝»</p>
+                    <div class="review-yandex">Отзыв из Яндекса</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">Anastasia _Ch</div>
+                        <div class="review-date">15 июля</div>
+                    </div>
+                    <div class="review-stars">★ ★ ★ ★ ★</div>
+                    <p class="review-text">«Прекрасный барбершоп, записывала молодого человека уже не первый раз, стрижка супер. Компетентность и качество работы отличное.»</p>
+                    <div class="review-yandex">Отзыв из Яндекса</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">Евгений М.</div>
+                        <div class="review-date">28 июня</div>
+                    </div>
+                    <div class="review-stars">★ ★ ★ ★ ★</div>
+                    <p class="review-text">«Был первый раз, мастер Николай сделал всё по высшему разряду: аккуратная стрижка, четкие контуры бороды. Сервис на уровне, угостили кофе. Теперь буду стричься только здесь.»</p>
+                    <div class="review-yandex">Отзыв из Яндекса</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">Александр В.</div>
+                        <div class="review-date">20 июня</div>
+                    </div>
+                    <div class="review-stars">★ ★ ★ ★ ★</div>
+                    <p class="review-text">«Крутой барбершоп с правильной мужской атмосферой. Стригся у Владислава — мастер с полуслова понял, что мне нужно. Работает быстро, но без суеты. Интерьер шикарный, очень комфортно.»</p>
+                    <div class="review-yandex">Отзыв из Яндекса</div>
+                </div>
+            </div>
         </div>
     </section>
 
